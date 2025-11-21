@@ -1,25 +1,26 @@
-# 1️⃣ Base image
+# Use official Node.js image as the base
 FROM node:22-alpine
 
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Set working directory
 WORKDIR /app
 
-# 2️⃣ Copy package files
-COPY package*.json ./
+# Copy package files and pnpm lockfile
+COPY package.json pnpm-lock.yaml* ./
 
-# 3️⃣ Install all dependencies (build uchun devDependencies kerak)
-RUN npm install
+# Install dependencies using pnpm
+RUN pnpm install --frozen-lockfile
 
-# 4️⃣ Copy source code
+# Copy the rest of the app source code
 COPY . .
 
-# 5️⃣ Build Vite app
-RUN npm run build
+# Build the Next.js app
+RUN pnpm build
 
-# 6️⃣ Install static server
-RUN npm install -g serve
-
-# 7️⃣ Expose port
+# Expose the default Next.js port
 EXPOSE 3000
 
-# 8️⃣ Serve production build
-CMD ["serve", "-s", "dist", "-l", "5173"]
+# Start the Next.js app in production mode
+CMD ["pnpm", "start"]
