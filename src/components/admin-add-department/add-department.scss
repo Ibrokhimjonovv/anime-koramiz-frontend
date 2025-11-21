@@ -1,0 +1,42 @@
+.add-department {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    flex-wrap: wrap;
+    margin-left: 40px;
+
+    label {
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    input, input[type="file"], textarea {
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        outline: none;
+        padding: 10px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 15px;
+        overflow: hidden;
+    }
+    
+    textarea {
+        height: 200px;
+        resize: vertical;
+    }
+
+    button {
+        background-color: #FF9222;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+        height: 45px;
+        color: #fff;
+        margin-top: 20px;
+    }
+}

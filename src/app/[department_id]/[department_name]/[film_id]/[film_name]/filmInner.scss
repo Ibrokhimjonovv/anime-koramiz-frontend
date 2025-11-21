@@ -1,0 +1,776 @@
+#yandex_rtb_R-A-15844820-4 {
+  height: 100%;
+}
+
+.save-container {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  &.saved {
+    background-color: #fff;
+    color: #12141a;
+  }
+
+  p {
+    border: none !important;
+  }
+}
+
+.err-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 13px;
+
+  .err-card {
+    border: 1px solid #c9c9c9;
+    border-radius: 16px;
+    max-width: 500px;
+    padding: 30px;
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.not-available-message {
+  padding: 15px;
+  padding-left: 45px;
+  width: 95%;
+  margin: 110px auto 20px;
+  border-radius: 5px;
+  background-color: #362022;
+  border: 1px solid hsla(0, 0%, 100%, 0.1019607843);
+  font-weight: 600;
+  background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48dGl0bGU+SWNvbjwvdGl0bGU+PGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaCBCZXRhLjwvZGVzYz48cGF0aCBkPSdNMTAgNWMuNTUgMCAxIC40NSAxIDF2NGMwIC41NS0uNDUgMS0xIDFzLTEtLjQ1LTEtMXYtNGMwLS41NS40NS0xIDEtMXptLS4wMS01Yy01LjUyIDAtOS45OSA0LjQ4LTkuOTkgMTBzNC40NyAxMCA5Ljk5IDEwYzUuNTMgMCAxMC4wMS00LjQ4IDEwLjAxLTEwcy00LjQ4LTEwLTEwLjAxLTEwem0uMDEgMThjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4em0xLTNoLTJ2LTJoMnYyeicgZmlsbD0nI2ZmZicgZmlsbC1ydWxlPSdub256ZXJvJy8+PC9zdmc+);
+  background-position: 15px;
+  background-repeat: no-repeat;
+
+  p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.film-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: 90px;
+
+  #film-err {
+    width: 100%;
+    display: block;
+    padding-left: 30px;
+    color: #fff;
+    margin-bottom: 5px;
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: 2px solid #838383;
+      color: #838383;
+      padding: 5px 12px;
+      border-radius: 7px;
+
+      &:hover {
+        background-color: #838383;
+        color: #12141a;
+      }
+    }
+  }
+
+  .width {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .film-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .player-films {
+      width: 65%;
+      height: 427px;
+
+      #soon-img,
+      #filler-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .react-player-wrapper {
+      position: relative;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .react-player-wrapper .react-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .suggested-films {
+      padding: 20px;
+      border: 1px solid #8e8e8e;
+      border-radius: 1rem;
+      color: #fff;
+      max-width: 360px;
+      max-height: 420px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+
+      a {
+        color: #fff;
+
+        .suggested-item {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .img {
+            width: 40%;
+            height: 90px;
+            background-color: #838383;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .text {
+            width: 60%;
+          }
+
+          h3 {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Maksimal 3 qatorni ko'rsatadi */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 13px;
+          }
+
+          span {
+            font-size: 12px;
+          }
+
+          span:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .about-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+
+    .about-left {
+      width: 67%;
+    }
+
+    .about-right-ad {
+      width: 30%;
+      position: relative !important;
+
+      #yandex_rtb_R-A-16775059-7 {
+        position: sticky;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+      }
+    }
+  }
+
+  .about-film {
+    color: #fff;
+    padding-left: 55px;
+    width: 100%;
+    margin-top: 10px;
+
+    .my-telegram {
+      width: 100%;
+      height: 45px;
+      border: 1px solid #fff;
+      border-radius: 7px;
+      margin-top: 10px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+
+    .film-title {
+      position: relative;
+      // padding-right: 140px;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    h3 {
+      color: #ff8c22;
+      margin-top: 15px;
+    }
+
+    p {
+      border-bottom: 1px solid #ffffff34;
+      padding: 10px 0;
+    }
+
+    .series {
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      margin-left: 30px;
+      justify-content: flex-start;
+
+      .series-item {
+        border-radius: 8px;
+        padding: 8px 25px;
+        border: 1px solid #898989;
+        background-color: #1e222b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.single {
+          width: 100%;
+        }
+      }
+    }
+
+    .series-item {
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+
+    .series-item.selected {
+      background-color: #12141a;
+      /* Tanlangan seriya uchun orqa fon rangi */
+      color: white;
+      /* Matn rangi oq bo'lishi uchun */
+      border: 1px solid #ff8c22;
+    }
+  }
+
+  #des {
+    margin-left: 30px;
+    color: #ff8c22;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  .middlee-ad {
+    margin-top: 5px;
+  }
+
+  #genres,
+  #year,
+  #country,
+  #oth {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-left: 30px;
+
+    a {
+      color: #ff8c22;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  #oth {
+    display: flex;
+    align-items: center;
+    a {
+      border-radius: 8px;
+      padding: 3px 10px;
+      border: 1px solid #898989;
+      background-color: #1e222b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.suggested-films {
+  padding: 20px;
+  border: 1px solid #8e8e8e;
+  border-radius: 1rem;
+  color: #fff;
+  max-width: 360px;
+  max-height: 420px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  a {
+    color: #fff;
+
+    .suggested-item {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .img {
+        width: 40%;
+        height: 90px;
+        background-color: #838383;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .text {
+        width: 60%;
+      }
+
+      h3 {
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 13px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      span:last-child {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+.mob-ver {
+  display: none;
+}
+
+.save-login-l {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border: unset !important;
+  padding: unset !important;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  flex-direction: unset !important;
+}
+
+.save-inn {
+  display: flex !important;
+  align-items: center;
+  // justify-content: center;
+  margin-top: 5px;
+
+  span {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+  .saq {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    border: unset !important;
+    padding: unset !important;
+    // position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#login-to-view-film {
+  box-shadow: inset 0 0 15px #fff;
+  animation: login 3s infinite linear;
+  border-radius: 12px;
+  font-size: 24px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+
+  a {
+    animation: __ 1s infinite linear;
+    color: #ff8c22;
+  }
+}
+
+@keyframes __ {
+  0% {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  100% {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+@keyframes login {
+  0% {
+    box-shadow: inset 0 0 5px 0 #fff;
+  }
+
+  7% {
+    box-shadow: unset;
+  }
+
+  10% {
+    box-shadow: inset 0 0 20px 0 #fff;
+  }
+
+  17% {
+    box-shadow: inset 0 0 15px 0 #fff;
+  }
+
+  22% {
+    box-shadow: unset;
+  }
+
+  30% {
+    box-shadow: inset 0 0 10px 0 #fff;
+  }
+
+  38% {
+    box-shadow: inset 0 0 5px 0 #fff;
+  }
+
+  45% {
+    box-shadow: unset;
+  }
+
+  50% {
+    box-shadow: inset 0 0 5px 0 #fff;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .film-inner-container {
+    .about-film {
+      width: 100%;
+      .series {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-content: center;
+
+        a {
+          div {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .film-inner-container {
+    .about-film {
+      width: 100%;
+      .series {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-content: center;
+
+        a {
+          div {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile uchun
+@media (max-width: 768px) {
+  .not-available-message {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #yandex_rtb_R-A-15844820-4 {
+    height: auto;
+  }
+  .film-inner-container {
+    .film-item {
+      .deskt-ver {
+        display: none;
+      }
+
+      .player-films {
+        width: 100%;
+      }
+    }
+
+    .about-container {
+      flex-direction: column;
+
+      .about-left,
+      .about-right-ad {
+        width: 100%;
+
+        #yandex_rtb_R-A-16775059-7 {
+          position: unset !important;
+        }
+      }
+    }
+
+    .about-film {
+      padding-left: 0;
+      width: 100%;
+
+      .series {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+
+        a {
+          div {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #login-to-view-film {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .film-inner-container {
+    .film-item {
+      .player-films {
+        height: auto;
+      }
+    }
+
+    #film-err {
+      padding-left: 0;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
+
+    .film-item {
+      .react-player-wrapper {
+        height: 300px;
+      }
+    }
+
+    .about-film {
+      .film-title {
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        padding: unset;
+        align-items: flex-start;
+
+        .save-inn {
+          display: flex !important;
+          .saq,
+          .save-login-l {
+            margin-top: 5px;
+            position: unset !important;
+          }
+        }
+      }
+
+      .series {
+        margin-left: 0;
+        font-weight: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .series-item {
+          font-size: 14px;
+          padding: 8px 12px;
+          text-align: center;
+        }
+      }
+    }
+
+    #des,
+    #year,
+    #country,
+    #genres,
+    #oth {
+      margin-left: 0;
+    }
+  }
+
+  .mob-ver {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.react-player-wrapper {
+  .for-iframe {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}

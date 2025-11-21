@@ -1,0 +1,143 @@
+#films-container {
+    background-image: url("/assets/bg-image.png");
+    background-position: left top;
+    background-size: 100% 750px;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+    position: relative;
+    margin-top: 90px;
+    
+    #q {
+        position: relative;
+        max-width: 1366px;
+        margin: 0 auto;
+        z-index: 100;
+    }
+}
+
+#films-container * {
+    z-index: 1;
+}
+
+#films-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.582); /* Qoraytirish darajasi */
+}
+
+.top-inner {
+    padding: 50px;
+
+    .top-inner-left {
+        width: 60%;
+
+        h1 {
+            font-family: var(--font-luckiest-guy);
+            font-size: 40px;
+            color: #fff;
+            letter-spacing: 2px;
+            
+            span {
+                font-family: var(--font-luckiest-guy);
+                color: #FF8C22;
+            }
+        }
+
+        p {
+            color: #8C8D91;
+            font-family: "Roboto Slab", sans-serif;
+            font-size: 17px;
+            width: 70%;
+            padding: 15px 0 0 15px;
+        }
+    
+        p, a {
+            font-family: "Roboto Slab", serif;
+        }
+
+        a {
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            background-color: #FF8C22;
+            padding: 10px 0;
+            border-radius: 12px;
+            color: #fff;
+            margin-top: 40px;
+            border: 2px solid transparent;
+
+            &:hover {
+                border-color: #FF8C22;
+                background-color: transparent;
+            }
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+
+.bottom-inner {
+    padding: 0 50px;
+}
+
+@media screen and (min-width: 1600px) {
+    #films-container {
+        min-height: 90vh;
+    }
+}
+
+@media screen and (min-width: 2049px) {
+    #films-container {
+        min-height: 75vh;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #films-container {
+        background-position: center;
+        background-size: cover;
+        min-height: unset;
+
+        .top-inner {
+            padding: 50px 20px;
+            .top-inner-left {
+                width: 100%;
+
+                p {
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+    #departments-container {
+        margin-top: unset !important;
+        padding: 30px 10px !important;
+
+        .mySwiper_2 {
+            .swiper-slide { 
+                width: 100% !important;
+
+                .texts {
+                    h1 {
+                        font-size: 24px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-inner {
+        padding: 0 20px;
+    }
+}
+

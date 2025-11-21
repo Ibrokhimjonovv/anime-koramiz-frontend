@@ -1,0 +1,130 @@
+#votes {
+    width: 60%;
+    margin-left: 55px;
+    h3 {
+        color: #FF8C22;
+        margin-top: 15px;
+    }
+
+    #vote-btns {
+        margin-left: 30px;
+        width: 120px;
+        height: 40px;
+        display: flex;
+        margin-top: 10px;
+
+        button {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f48521;
+            background-color: transparent;
+            gap: 3px;
+            cursor: pointer;
+
+            &:first-child {
+                color: #2ecc71;
+                border-radius: 5px 0 0 5px;
+
+                
+
+                &:hover, &.active {
+                    background-color: #2ecc71;
+                    color: #fff;
+
+                    svg {
+                        fill: #fff !important;
+                    }
+                }
+                svg {
+                    fill: #2ecc71 !important;    
+                }
+            }
+            &:last-child {
+                color: rgb(252 26 63 / .4);
+                border-radius: 0 5px 5px 0;
+                &:hover, &.active {
+                    background-color: rgb(252 26 63 / .4);
+                    color: #fff;
+
+                    svg {
+                        fill: #fff !important;
+                    }
+                }
+                svg {
+                    fill: rgb(252 26 63 / .4) !important;    
+                }
+            }
+            
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+.vote-container {
+    background-color: #00000049;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .vote-status {
+        width: 400px;
+        padding: 20px;
+        background-color: rgb(25, 25, 25);
+        border-radius: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    small {
+        margin-top: 5px;
+    }
+
+    button {
+        width: 100%;
+        height: 45px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    #votes {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #votes {
+        margin-left: 0;
+        width: 100%;
+
+        h3 {
+            font-size: 19px;
+        }
+
+        #vote-btns {
+            margin-left: 0;
+        }
+    }
+
+    .vote-container {
+        .vote-status {
+            width: 90%;
+        }
+    }
+}

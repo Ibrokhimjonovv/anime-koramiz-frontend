@@ -1,0 +1,95 @@
+.edit-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 90px;
+
+    h1 {
+        color: #fff;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 600px;
+        margin-top: 20px;
+
+        input, label {
+            height: 45px;
+            width: 100%;
+            background-color: #1E222B;
+            outline: none;
+            border-radius: 8px;
+            padding: 7px;
+            color: #fff;
+            font-size: 16px;
+            border: 1px solid #464646;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            display: none;
+        } 
+
+        #prev {
+            margin: 0 auto;
+        }
+
+        button {
+            background-color: #373737;
+            height: 45px;
+            color: #fff;
+            border: 1px solid #373737;
+            outline: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1367px) {
+    .edit-container {
+        min-height: 80vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .edit-container {
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .edit-container {
+        background-position: center;
+        background-size: cover;
+        padding: 30px;
+        min-height: unset;
+
+        form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .edit-container {
+        h1 {
+            font-size: 22px;
+        }
+    }
+}

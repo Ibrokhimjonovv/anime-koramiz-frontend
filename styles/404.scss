@@ -1,0 +1,27 @@
+.not-found {
+    text-align: center;
+    padding: 80px 50px;
+    font-family: Arial, sans-serif;
+    margin-top: 90px;
+    
+    h1 {
+      font-size: 100px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    a {
+      font-size: 18px;
+      color: #007bff;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  

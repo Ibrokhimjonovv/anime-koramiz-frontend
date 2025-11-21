@@ -1,0 +1,153 @@
+footer {
+  background-color: #1e222b;
+
+  .footer-inner {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    // height: 300px;
+    flex-wrap: wrap;
+
+    .footer-item {
+      width: 300px;
+      color: #fff;
+
+      .logo {
+        width: 200px;
+        margin-bottom: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        #logo-light {
+          display: none;
+        }
+      }
+
+      .links {
+        font-size: 30px;
+        position: relative;
+        top: 30px;
+
+        a {
+          margin-left: 20px;
+        }
+      }
+
+      h3 {
+        color: #ff8c22;
+      }
+
+      ul {
+        text-align: center;
+
+        li {
+          margin-top: 15px;
+
+          h3 {
+            a {
+              color: #ff8c22;
+            }
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* elementlar orasida bo'sh joy */
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      input,
+      textarea {
+        background-color: #30353f;
+        border-radius: 8px;
+        outline: 0;
+        border: none;
+        resize: none;
+        color: #fff;
+      }
+
+      textarea {
+        width: 100%;
+      }
+
+      input,
+      textarea,
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      input {
+        width: 48%;
+      }
+      button {
+        flex: 1 0 100%; /* buton butun kenglikni egallaydi */
+        background-color: #c7c8ca;
+        color: #000000;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      button:hover {
+        background-color: #808899;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-inner {
+    row-gap: 20px;
+    justify-content: center !important;
+
+    .footer-item {
+      text-align: center;
+
+      .logo {
+        margin: 0 auto 10px;
+      }
+
+      .links {
+        font-size: 30px;
+        position: relative;
+        top: 20px !important;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+
+        a {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .footer-inner {
+    .footer-item {
+        form {
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

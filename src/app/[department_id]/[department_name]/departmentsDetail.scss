@@ -1,0 +1,318 @@
+.film-department {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.film-preview {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.react-player-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.react-player-wrapper .react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.padd {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+#title {
+  font-size: 30px;
+  color: #fff;
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+  gap: 20px;
+  color: #fff;
+
+  .content-inner {
+    height: 100%;
+    height: 300px;
+    width: 295px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fffdf052;
+
+    &.right-reveal {
+      transform: translateX(-30px);
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      &.active {
+        transform: unset;
+        opacity: 1;
+      }
+    }
+
+    .views {
+      .series {
+        color: #fd8d21;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .count {
+      background-color: #fff;
+      padding: 3px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      gap: 5px;
+      color: #10131c;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .data {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.322);
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      width: 100%;
+      padding: 10px 15px;
+      z-index: 10;
+      opacity: 0;
+
+      .texts {
+        width: 80%;
+      }
+
+      h1 {
+        font-size: 20px;
+        white-space: nowrap;
+        /* Matnni bir qatorga sig'dirish */
+        overflow: hidden;
+        /* Sig'magan qismni yashirish */
+        text-overflow: ellipsis;
+        /* Uch nuqta qo'shish */
+      }
+
+      img {
+        width: 30px !important;
+        height: auto;
+      }
+    }
+
+    &:hover .data {
+      opacity: 1;
+    }
+  }
+}
+
+.divider {
+  width: 95%;
+  margin: 0 auto;
+  height: 2px;
+  background-image: linear-gradient(to left, #ffffff00, #0091f0, #ffffff00);
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.pagination-container {
+  margin-top: 30px;
+  width: 100%;
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  button {
+    color: oklch(0.87 0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid #363636;
+      background-color: #151515;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+
+    &.prev-next {
+      padding: 5px 10px;
+      height: 33px;
+
+      &:disabled {
+        opacity: 0.5;
+
+        &:hover {
+          background-color: unset;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #1b1b1b;
+    }
+  }
+
+  .pagination-numbers {
+    display: flex;
+    gap: 3px;
+
+    button {
+      width: 35px;
+      height: 33px;
+    }
+  }
+}
+
+.save-mob {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #title {
+    font-size: 22px;
+    margin: 0 auto;
+  }
+
+  .contents {
+    justify-content: center !important;
+
+    .content-inner {
+      width: 46%;
+      height: 200px;
+
+      a {
+        width: 100%;
+
+        .views {
+          .series {
+            padding: 0 5px;
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 40px;
+          }
+
+          .count {
+            font-size: 14px;
+            padding: 0 5px;
+
+            svg {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          .save-mob {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            svg {
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+
+        .data {
+          opacity: 1;
+          padding: 5px 7px;
+
+          .texts {
+            width: 100%;
+
+            h1 {
+              font-size: 14px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .save {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .pagination-container {
+      margin-top: 30px;
+
+      .pagination-controls {
+        flex-direction: column;
+        row-gap: 5px;
+      }
+
+      .pagination-numbers {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+  .padd.helper {
+    padding: 20px 10px;
+  }
+}

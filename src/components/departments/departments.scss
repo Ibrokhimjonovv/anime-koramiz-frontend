@@ -1,0 +1,139 @@
+.mell-ad {
+    padding: 0 !important;
+    height: 100%;
+
+    html {
+        body {
+            a {
+                img {
+                    width: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+#departments-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1E222E;
+    border-radius: 1rem;
+    margin-top: -60px;
+    position: relative;
+    max-width: 1366px;
+
+    .btns {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            color: #fff;
+        }
+
+        .btns-inner {
+            display: flex;
+            gap: 5px;
+
+            .prev-btn,
+            .next-btn,
+            .all-btn {
+                color: #fff;
+                padding: 5px 10px;
+                border: 1px solid #3E3E3E;
+                display: flex;
+                align-items: center;
+                border-radius: 7px;
+                cursor: pointer;
+                background-color: #1F232F;
+                gap: 5px;
+
+                img {
+                    width: 20px;
+                    opacity: 50%;
+
+                    &::selection {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .next-btn {
+
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .mySwiper_2 {
+        margin-top: 20px;
+        padding: 0 3px;
+
+        .swiper-slide {
+            border: 1px solid #656565;
+            background-image: radial-gradient(#2E3A57, #303D5B, #2E3A57, #1F232F);
+            border-radius: 1rem;
+            overflow: hidden;
+            
+            a {
+                gap: 10px;
+                padding: 20px;
+                display: flex;
+                color: #fff;
+                width: 100%;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .texts {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 30px;
+                    white-space: nowrap; /* Matnni bir qatorga sig'dirish */
+                    overflow: hidden; /* Sig'magan qismni yashirish */
+                    text-overflow: ellipsis; /* Uch nuqta qo'shish */
+                    width: 100%;
+                }
+                
+    
+                p {
+                    display: flex;
+                    justify-content: space-between;
+            
+                    .color {
+                        color: #FF8C22;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #departments-container {
+        .btns {
+            .btns-inner {
+                .prev-btn, .next-btn {
+                    display: none;
+                }
+
+                .all-btn {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

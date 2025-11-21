@@ -1,0 +1,363 @@
+header {
+  min-height: 90px;
+  background-color: #1e222b;
+  padding: 0 50px;
+  position: fixed;
+  z-index: 1112;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  marquee {
+    color: #fff;
+  }
+
+  .header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    .logo {
+      width: 200px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #logo-light {
+        display: none;
+      }
+    }
+
+    .right-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .mid-line {
+      height: 45px;
+      width: 2px;
+      background-color: #3f424b;
+    }
+
+    .search-btns {
+      display: flex;
+      gap: 10px;
+      
+
+      a {
+        position: relative;
+        width: 100%;
+        height: 45px;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 15px;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+
+        
+        &:hover {
+          box-shadow: 0 0 0 transparent !important;
+        }
+
+        img {
+          position: relative;
+          width: 20px;
+        }
+      }
+    }
+
+    .theme {
+      input {
+        display: none;
+
+        &:checked ~ label span {
+          right: 50%;
+        }
+      }
+
+      label {
+        background-color: #282b34;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        border-radius: 12px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          right: 100%;
+          transform: translateX(100%);
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          background-color: #373737;
+          position: absolute;
+          top: 0;
+          border-radius: 12px;
+
+          &::selection {
+            background-color: transparent;
+          }
+        }
+
+        img {
+          width: 23px;
+          position: relative;
+        }
+      }
+    }
+
+    .profile {
+      display: flex;
+      gap: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        padding: 5px;
+        position: relative;
+
+        span#count {
+          position: absolute;
+          top: 15px;
+          right: 0;
+          color: #fff;
+          background-color: #f29925;
+          width: 90%;
+          height: 90%;
+          max-width: 20px;
+          max-height: 20px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+
+        &:hover {
+          background-color: #2c3036fd;
+          border-radius: 5px;
+        }
+
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .menu-icon {
+      background-color: #12151b;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+      }
+    }
+
+    .menu-icon {
+      background-color: #1e222b;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      width: 40px;
+      height: 35px;
+      cursor: pointer;
+      display: none;
+
+      img {
+        width: 25px;
+
+        &::selection {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .menu-offcanvas-container {
+      width: 300px;
+      height: 100vh;
+      background-color: #1e222b;
+      position: fixed;
+      top: 89px;
+      left: -100%;
+      z-index: 99999;
+      transition: left 0.3s ease-in-out;
+      overflow-x: hidden;
+      padding-bottom: 20px;
+      display: none;
+
+      .profile {
+        a {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+
+      .theme {
+        width: 100%;
+
+        label {
+          width: 80%;
+          margin: 0 auto;
+          justify-content: space-around;
+        }
+      }
+
+      .social {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        a {
+          display: flex;
+          width: 100%;
+          height: 45px;
+          border-radius: 5px;
+          background-color: #10131c;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          color: #777e90;
+          gap: 5px;
+          font-size: 14px;
+
+          img {
+            width: 26px;
+          }
+
+          i {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .active-canvas {
+      left: 0; // Slide the menu in when active
+    }
+  }
+}
+
+.off-c {
+  top: 179px !important;
+  width: 90% !important;
+  margin: 0 auto !important;
+  border-radius: 8px !important;
+}
+
+.qr {
+  display: none;
+
+  a {
+    position: relative;
+    span#count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      color: #fff;
+      background-color: #f29925;
+      width: 90%;
+      height: 90%;
+      max-width: 17px;
+      max-height: 17px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+    header {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+  header {
+    padding: 0 20px;
+    .header-container {
+      .qr {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        a {
+          display: flex;
+          svg {
+            width: 25px;
+          }
+        }
+      }
+      .menu-icon {
+        display: flex;
+      }
+
+      .theme,
+      .profile,
+      .search {
+        display: none;
+      }
+    }
+  }
+
+  .menu-offcanvas-container {
+    display: unset !important;
+
+    .theme,
+    .profile,
+    .search {
+      display: flex !important;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    .header-container {
+      .search-btns-desk {
+        display: none;
+      }
+    }
+
+    .search-btns-mob{
+        margin: 10px auto 0;
+    }
+  }
+}

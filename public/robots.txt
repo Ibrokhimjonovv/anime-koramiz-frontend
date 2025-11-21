@@ -1,0 +1,7 @@
+# robots.txt for https://afd-platform.uz
+
+User-agent: *
+Allow: /
+
+
+Sitemap: https://afd-platform.uz/sitemap.xml
