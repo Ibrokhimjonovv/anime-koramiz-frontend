@@ -19,7 +19,7 @@ RUN npm run build
 RUN npm install -g serve
 
 # 7️⃣ Expose port
-EXPOSE 5173
+EXPOSE 3000
 
 # 8️⃣ Serve production build
 CMD ["serve", "-s", "dist", "-l", "5173"]
